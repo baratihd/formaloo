@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     # Local apps
     'apps.accounts.apps.AccountsConfig',
+    'apps.store.apps.StoreConfig',
 ]
 
 MIDDLEWARE = [
