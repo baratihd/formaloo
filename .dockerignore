@@ -42,6 +42,7 @@ env
 # .env files
 .env
 envs/.env*
+!envs/.env.test
 
 # Celery beat schedule file
 celerybeat*
