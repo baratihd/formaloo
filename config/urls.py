@@ -11,6 +11,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('swagger/', include('extensions.spectacular')),
     path('accounts/', include('apps.accounts.urls')),
+    path('store/', include('apps.store.urls')),
 ]
 
 if settings.DEBUG:
