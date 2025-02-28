@@ -1,0 +1,97 @@
+[project]
+requires-python = ">=3.12"
+
+[tool.ruff]
+fix = true
+indent-width = 4
+line-length = 120
+show-fixes = true
+cache-dir = '.cache/ruff'
+output-format = 'concise'
+exclude = [
+  '*/migrations/*.py',
+  '__pycache__',
+  '.vscode',
+  'scripts',
+  '.idea',
+  'venv',
+  '.venv',
+  '*.pyi',
+  'apps/agency/*.py',
+  'apps/help/*.py',
+  'apps/ticket/*.py',
+  'apps/notification/*.py',
+  'apps/student_damage/*.py',
+  'apps/darman/views/v1_views.py',
+  'apps/expense/views/v1_views.py',
+  'apps/expense/archive/views.py',
+  'apps/expense/utils.py',
+  'apps/darman/serializers/required_to_refactor_serializers.py',
+  'apps/expense/serializers/required_to_refactor_serializers.py',
+  'apps/accounts/serializers/v1_serializers.py',
+  'apps/base/core/services/fanavaran_service.py',
+]
+extend-include = ['sandbox.py']
+
+[tool.ruff.format]
+line-ending = 'auto'
+quote-style = 'single'
+indent-style = 'space'
+docstring-code-format = true
+docstring-code-line-length = 50
+skip-magic-trailing-comma = false
+
+# https://docs.astral.sh/ruff/rules/
+[tool.ruff.lint]
+select = [
+  'S',      # security
+  'F',      # flake8
+  'PIE',    # improving code quality and readability
+  'A',      # builtin names used
+  'E',      # errors
+  'W',      # warnings
+  'I',      # isort
+  'TID',    # tidier imports
+  'TCH',    # imports for type checking
+  'N',      # naming
+  'C4',     # list/set/dict comprehensions
+  'D419',   # doc style
+  'DJ',     # django
+  'ICN',    # import conventions
+  'UP',     # syntax newer
+  'ASYNC',  # async
+  'T20',    # found print
+  'PT',     # pytest style
+  'RSE',    # Unnecessary parentheses on raised exception
+  'RET',    # checks returns
+  'SIM',    # simplify
+  'TD',     # todos comments
+  'FIX',    # fix me comments
+]
+extend-ignore = [
+  'UP031',  # Use format specifiers instead of percent format
+  'S101',   # Use of `assert` detected
+  'RET503', # Missing explicit `return` at the end of function able to return non-`None` value
+  'S501',   # requests with verify=False
+  'FIX002', # Line contains TO-DO, consider resolving the issue
+  'TD003',  # Missing issue link on the line following this TO-DO
+  'UP007',  # non-pep604-annotation
+]
+
+[tool.ruff.lint.isort]
+from-first = true
+length-sort = true
+order-by-type = true
+case-sensitive= true
+force-wrap-aliases = true
+combine-as-imports = true
+detect-same-package = true
+length-sort-straight = true
+split-on-trailing-comma = true
+force-sort-within-sections=true
+lines-after-imports = 2
+known-first-party = ['django']
+known-third-party = ['rest_frameword']
+known-local-folder = ['core', 'config', 'apps']
+section-order = ['future', 'standard-library', 'first-party', 'third-party', 'local-folder' ]
+no-lines-before = ['future',]

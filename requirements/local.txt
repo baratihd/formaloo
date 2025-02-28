@@ -1,0 +1,5 @@
+-r base.txt
+
+ipython==8.22.*
+ruff==0.8.*
+pre-commit==4.0.*

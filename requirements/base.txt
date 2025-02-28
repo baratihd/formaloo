@@ -1,0 +1,22 @@
+# Core packages
+Django==4.2.*
+djangorestframework==3.15.*
+djangorestframework-simplejwt==5.4.*
+django-cors-headers==4.7.*
+
+# Disk DB
+psycopg2-binary==2.9.*
+
+# Cache DB
+django-redis==5.4.*
+
+# Swqgger
+drf-spectacular==0.28.*
+
+# Env manager
+django-environ==0.12.*
+
+# Test
+pytest-cov==6.0.*
+pytest-xdist==3.6.*
+pytest-django==4.8.*

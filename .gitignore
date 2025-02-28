@@ -1,0 +1,36 @@
+# Database
+*.sqlite3*
+
+# Editors and runtime
+*.pyc
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+.cache/
+
+# VritualEnv
+venv/
+.venv/
+test-venv/
+
+# Test
+*.coverage
+.coverage
+.pytest_cache/
+
+# Assets
+media/*
+static/*
+!media/.gitkeep
+!static/.gitkeep
+
+# Log files
+*.log
+*.log.[0-9]*
+
+# Env
+.env
+envs/.env.*
+!.env.sample
+!.env.test
