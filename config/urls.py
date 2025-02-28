@@ -9,6 +9,7 @@ from core.handlers import error400, error403, error404, error500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('swagger/', include('extensions.spectacular')),
     path('accounts/', include('apps.accounts.urls')),
 ]
 
