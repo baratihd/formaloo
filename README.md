@@ -43,6 +43,29 @@ This project implements a core feature for the AppStore service where users can 
    docker compose run backend pytest
    ```
 
+## Known Issues / Limitations
+1. **No Rate Limiting:**
+   - The API does not currently enforce rate limiting, which could make it vulnerable to abuse
+      (e.g., brute force login attempts or excessive API calls).
+   - Solution: Implement Django REST Framework’s throttling or an external API Gateway.
+2. **Basic Authentication Mechanism:**
+   - The project uses JWT authentication but does not implement refresh token rotation or advanced security mechanisms.
+   - Solution: Implement token blacklisting and session-based security enhancements.
+3. **Lack of Background Processing:**
+   - Actions like purchase processing and app verification updates are handled synchronously, which may slow down the
+     API as traffic increases.
+   - Solution: Use Celery with a message broker (e.g. RabbitMQ or Redis) to offload such tasks to a background worker.
+4. **No Permission-based Access Control:**
+   - Currently, there may not be fine-grained role-based access controls (RBAC) beyond simple user/admin distinctions.
+   - Solution: Implement Django Guardian or custom permissions for better access control.
+5. **Admin Verification Not Logged:**
+   - Admin verification changes are not logged, which can make auditing difficult.
+   - Solution: Implement Django’s built-in logging or use Django Simple History to track changes.
+6. **Scalability Concerns:**
+   - The database is a single PostgreSQL instance, and as the app grows, queries may become slow.
+   - Solution: Implement read replicas or use a caching layer like Redis for frequently accessed data.
+
+
 # Dashboard Design
 Click bellow link to see **Dashboard Design** documentation.
 
