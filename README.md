@@ -43,6 +43,11 @@ This project implements a core feature for the AppStore service where users can 
    docker compose run backend pytest
    ```
 
+# Dashboard Design
+Click bellow link to see **Dashboard Design** documentation.
+
+[![**Dashboard Design**](https://img.shields.io/badge/Developer%20Documentation-orange?style=for-the-badge&logo=developer)](./docs/dashboard.md)
+
 
 ## Helpful commands:
 - To run project (Developer):
