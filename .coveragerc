@@ -1,0 +1,16 @@
+[report]
+show_missing = false
+skip_covered = true
+skip_empty = true
+precision = 1
+sort = -cover
+format = text
+exclude_lines =
+omit =
+    admin.py
+    settings.py
+    */settings/*
+
+[html]
+title = Coverage Report
+directory = cov_html
