@@ -32,7 +32,7 @@ class AppCreateViewSchema(OpenApiViewExtension):
             response={
                 'type': 'object',
                 'properties': {
-                    'detail': {'type': 'string', 'example': 'Validation error message.'},
+                    'field_name': {'type': 'string', 'example': 'This field is required.'},
                 },
             },
             description='Bad Request',
