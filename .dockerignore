@@ -1,0 +1,47 @@
+# Docker
+compose.yaml
+Dockerfile*
+
+# Docs
+README.md
+docs/
+
+# Pipeline
+.github
+.git
+
+# Logs
+logs/*.log*
+
+# Statics
+static/*
+!static/.gitkeep
+
+# DB
+*.sqlite3*
+
+# Editors and runtime
+*.pyc
+.vscode/
+/.idea
+.idea/*
+__pycache__/
+*.py[cod]
+
+# VirtualEnv
+venv/
+.venv/
+test-venv/
+env
+
+# Test
+*.coverage
+.coverage
+.pytest_cache/
+
+# .env files
+.env
+envs/.env*
+
+# Celery beat schedule file
+celerybeat*
